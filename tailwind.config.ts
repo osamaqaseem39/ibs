@@ -14,6 +14,10 @@ const config: Config = {
         text: "#333333",
         accent: "#2E7D32",
       },
+      fontFamily: {
+        sans: ["var(--font-jost)", "sans-serif"],
+        heading: ["var(--font-gazpacho)", "sans-serif"],
+      },
     },
   },
   plugins: [],

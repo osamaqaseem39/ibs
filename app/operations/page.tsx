@@ -11,7 +11,7 @@ export default function Operations() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary to-red-700 text-white py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-center">Operations & Infrastructure</h1>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-center">Operations & Infrastructure</h1>
           <p className="text-center text-xl mt-4 text-gray-100">
             End-to-end control over export operations from farm to destination
           </p>
@@ -22,7 +22,7 @@ export default function Operations() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-text text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-text text-center mb-12">
               Supply Chain Workflow
             </h2>
             <div className="space-y-8">
@@ -97,7 +97,7 @@ export default function Operations() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-text text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-text text-center mb-12">
               Infrastructure
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -152,7 +152,7 @@ export default function Operations() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-text text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-text text-center mb-12">
               Compliance & Certifications
             </h2>
             <div className="bg-gray-50 p-8 rounded-lg">

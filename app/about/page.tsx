@@ -11,7 +11,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary to-red-700 text-white py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-center">About Us</h1>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-center">About Us</h1>
         </div>
       </section>
 
@@ -19,7 +19,7 @@ export default function About() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-text mb-6">Company Overview</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-text mb-6">Company Overview</h2>
             <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
               <p>
                 Founded in the heart of Quetta's trading community, International Business System began as a small export office and has grown into a respected name in cross-border agricultural trade. Through decades of experience, IBS has mastered the art of managing land-route exports — from sourcing and quality control to documentation and final delivery.
@@ -61,7 +61,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Vision */}
               <div className="bg-white p-8 rounded-lg shadow-md">
-                <h2 className="text-3xl font-bold text-text mb-6">Our Vision</h2>
+                <h2 className="text-3xl font-heading font-bold text-text mb-6">Our Vision</h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   To be Pakistan's most trusted and dependable exporter of fresh agricultural produce to Central Asia, recognized for reliability, fairness, and superior quality.
                 </p>
@@ -69,7 +69,7 @@ export default function About() {
 
               {/* Mission */}
               <div className="bg-white p-8 rounded-lg shadow-md">
-                <h2 className="text-3xl font-bold text-text mb-6">Our Mission</h2>
+                <h2 className="text-3xl font-heading font-bold text-text mb-6">Our Mission</h2>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
                     <span className="text-accent mr-2">✓</span>
@@ -102,7 +102,7 @@ export default function About() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-text text-center mb-12">Core Values</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-text text-center mb-12">Core Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
@@ -151,7 +151,7 @@ export default function About() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-text text-center mb-12">Leadership</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-text text-center mb-12">Leadership</h2>
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
                 <div className="w-48 h-48 bg-gradient-to-br from-primary to-red-700 rounded-full flex items-center justify-center text-white text-6xl font-bold flex-shrink-0">

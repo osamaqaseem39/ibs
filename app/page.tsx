@@ -8,7 +8,7 @@ export default function Home() {
       <section className="relative bg-gradient-to-r from-gray-900 to-gray-700 text-white py-20 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
               Delivering Freshness from Pakistan to Global Markets
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200">
@@ -32,7 +32,7 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-text mb-6">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-text mb-6">
               Connecting Pakistan to Central Asia
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
@@ -73,7 +73,7 @@ export default function Home() {
       {/* Featured Products */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-text text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-text text-center mb-12">
             Our Products
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

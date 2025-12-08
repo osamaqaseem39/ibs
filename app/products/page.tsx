@@ -11,7 +11,7 @@ export default function Products() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary to-red-700 text-white py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-center">Our Products</h1>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-center">Our Products</h1>
           <p className="text-center text-xl mt-4 text-gray-100">
             Premium quality fresh produce sourced from Pakistan's finest agricultural regions
           </p>
@@ -31,7 +31,7 @@ export default function Products() {
                 </div>
               </div>
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-text mb-6">Fresh Mandarin (Kinnow)</h2>
+                <h2 className="text-3xl md:text-4xl font-heading font-bold text-text mb-6">Fresh Mandarin (Kinnow)</h2>
                 <div className="space-y-4 text-gray-700">
                   <div>
                     <h3 className="font-semibold text-text mb-2">Origin:</h3>
@@ -73,7 +73,7 @@ export default function Products() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
-                <h2 className="text-3xl md:text-4xl font-bold text-text mb-6">Fresh Potatoes</h2>
+                <h2 className="text-3xl md:text-4xl font-heading font-bold text-text mb-6">Fresh Potatoes</h2>
                 <div className="space-y-4 text-gray-700">
                   <div>
                     <h3 className="font-semibold text-text mb-2">Origin:</h3>
@@ -131,7 +131,7 @@ export default function Products() {
                 </div>
               </div>
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-text mb-6">Rice (Basmati & IRRI Varieties)</h2>
+                <h2 className="text-3xl md:text-4xl font-heading font-bold text-text mb-6">Rice (Basmati & IRRI Varieties)</h2>
                 <div className="space-y-4 text-gray-700">
                   <div>
                     <h3 className="font-semibold text-text mb-2">Origin:</h3>

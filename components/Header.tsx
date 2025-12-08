@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="text-2xl font-bold text-primary">
+            <div className="text-2xl font-heading font-bold text-primary">
               <span className="text-primary">IBS</span>
             </div>
           </Link>

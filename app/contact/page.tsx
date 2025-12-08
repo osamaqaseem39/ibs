@@ -31,7 +31,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary to-red-700 text-white py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-center">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-center">Contact Us</h1>
           <p className="text-center text-xl mt-4 text-gray-100">
             Get in touch with us for inquiries, quotes, or partnerships
           </p>
@@ -45,7 +45,7 @@ export default function Contact() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Contact Info */}
               <div>
-                <h2 className="text-3xl font-bold text-text mb-8">Get in Touch</h2>
+                <h2 className="text-3xl font-heading font-bold text-text mb-8">Get in Touch</h2>
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-xl font-semibold text-text mb-3">Head Office</h3>
@@ -89,7 +89,7 @@ export default function Contact() {
 
               {/* Inquiry Form */}
               <div>
-                <h2 className="text-3xl font-bold text-text mb-8">Send Us an Inquiry</h2>
+                <h2 className="text-3xl font-heading font-bold text-text mb-8">Send Us an Inquiry</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-text font-semibold mb-2">
@@ -171,7 +171,7 @@ export default function Contact() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-text text-center mb-8">Our Location</h2>
+            <h2 className="text-3xl font-heading font-bold text-text text-center mb-8">Our Location</h2>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-96 bg-gray-200 flex items-center justify-center">
                 <div className="text-center">
