@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Our Products | International Business System",
@@ -24,10 +25,13 @@ export default function Products() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="h-96 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center">
-                  <svg className="w-48 h-48 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
-                  </svg>
+                <div className="h-96 relative rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/kinnow.jpg"
+                    alt="Fresh Kinnow (Mandarins)"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
               <div>
@@ -106,10 +110,13 @@ export default function Products() {
                 </div>
               </div>
               <div className="order-1 md:order-2">
-                <div className="h-96 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
-                  <svg className="w-48 h-48 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                  </svg>
+                <div className="h-96 relative rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/potato.jpg"
+                    alt="Fresh Potatoes"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -123,11 +130,13 @@ export default function Products() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="h-96 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg flex items-center justify-center">
-                  <svg className="w-48 h-48 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
-                    <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
-                  </svg>
+                <div className="h-96 relative rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/rice.jpg"
+                    alt="Premium Rice"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
               <div>
