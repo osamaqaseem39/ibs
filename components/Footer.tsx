@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-text text-white mt-16">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Quick Links */}
+          {/* About Section - Left */}
           <div>
             <Link href="/" className="inline-block mb-4">
               <Image
@@ -17,6 +17,14 @@ export default function Footer() {
                 className="h-10 w-auto brightness-0 invert"
               />
             </Link>
+            <h3 className="text-xl font-bold mb-4">About</h3>
+            <p className="mb-2 text-gray-300">International Business System</p>
+            <p className="mb-2 text-gray-300">Exporters of Fresh Fruits, Vegetables & Rice</p>
+            <p className="text-sm text-gray-400">Established 1995 – Quetta, Pakistan</p>
+          </div>
+
+          {/* Quick Links - Center */}
+          <div className="flex flex-col items-start md:items-center">
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -47,18 +55,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company Info */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">International Business System</h3>
-            <p className="mb-2">Exporters of Fresh Fruits, Vegetables & Rice</p>
-            <p className="text-sm text-gray-300">Established 1995 – Quetta, Pakistan</p>
-          </div>
-
-          {/* Contact Info */}
+          {/* Contact Info - Right */}
           <div>
             <h3 className="text-xl font-bold mb-4">Contact</h3>
-            <p className="mb-2">Room No. 41, Ahmed Complex</p>
-            <p className="mb-2">M.A. Jinnah Road, Quetta, Pakistan</p>
+            <p className="mb-2 text-gray-300">Room No. 41, Ahmed Complex</p>
+            <p className="mb-2 text-gray-300">M.A. Jinnah Road, Quetta, Pakistan</p>
             <p className="mb-2">
               <a href="tel:+923337809555" className="hover:text-primary transition-colors">
                 +92-333-7809555
