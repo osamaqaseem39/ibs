@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,6 +8,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Quick Links */}
           <div>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/images/logo.png"
+                alt="IBS Logo"
+                width={120}
+                height={40}
+                className="h-10 w-auto brightness-0 invert"
+              />
+            </Link>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
