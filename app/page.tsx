@@ -70,22 +70,121 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Intro Component */}
-      <section className="py-20 bg-white relative">
+      {/* About Us Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative">
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary"></div>
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-heading font-bold text-text mb-6">
-                Connecting Pakistan to Central Asia
+                About International Business System
               </h2>
-              <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-            </div>
-            <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100">
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-center">
-                Headquartered in Quetta, IBS is strategically positioned to serve Afghanistan, Uzbekistan, and Tajikistan via reliable land routes. 
-                Over nearly three decades, IBS has played a leading role in connecting Pakistan's farms with international buyers across the Central Asian Republics (CARs) through reliable, land-based trade routes.
+              <div className="w-24 h-1 bg-primary mx-auto mb-4"></div>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Three decades of excellence in agricultural exports
               </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+              {/* Left Content */}
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-3xl font-heading font-bold text-text mb-4">
+                    Connecting Pakistan to Central Asia
+                  </h3>
+                  <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                    Established in 1995, International Business System (IBS) has become one of Pakistan's respected and time-tested export enterprises specializing in fresh fruits, vegetables, and rice. Over nearly three decades, IBS has played a leading role in connecting Pakistan's farms with international buyers across the Central Asian Republics (CARs) through reliable, land-based trade routes.
+                  </p>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Headquartered in Quetta, Balochistan, IBS is strategically positioned near the Afghanistan border, serving as a direct trade gateway to Central Asia. All exports are carried out exclusively via land routes, ensuring quick and efficient overland delivery of perishable goods.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 pt-4">
+                  <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <div className="text-3xl mb-3">🌍</div>
+                    <h4 className="font-bold text-text mb-2">6 Countries</h4>
+                    <p className="text-sm text-gray-600">Serving across Central Asia</p>
+                  </div>
+                  <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <div className="text-3xl mb-3">📦</div>
+                    <h4 className="font-bold text-text mb-2">3 Products</h4>
+                    <p className="text-sm text-gray-600">Premium quality exports</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Content - Key Features */}
+              <div className="space-y-4">
+                <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-xl border border-primary/20">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-text mb-2">Quality Assurance</h4>
+                      <p className="text-gray-700">Maintaining consistent standards from farm to delivery with rigorous quality control processes.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-accent/5 to-accent/10 p-6 rounded-xl border border-accent/20">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-text mb-2">Land-Route Expertise</h4>
+                      <p className="text-gray-700">Exclusive overland delivery ensuring quick and efficient transport of perishable goods.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-xl border border-primary/20">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-text mb-2">Trusted Partnerships</h4>
+                      <p className="text-gray-700">Building long-term relationships with farmers, logistic partners, and importers across the region.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-accent/5 to-accent/10 p-6 rounded-xl border border-accent/20">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-text mb-2">Ethical Practices</h4>
+                      <p className="text-gray-700">Conducting business with honesty, commitment, and transparency in all operations.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA to About Page */}
+            <div className="text-center">
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Learn More About Us
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
             </div>
           </div>
         </div>
