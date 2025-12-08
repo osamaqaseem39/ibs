@@ -19,10 +19,10 @@ export default function Home() {
         </div>
         
         {/* Red Overlay */}
-        <div className="absolute inset-0 bg-primary/60"></div>
+        <div className="absolute inset-0 bg-primary/40"></div>
         
         {/* Additional dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
         
         {/* Background Pattern (optional, for texture) */}
         <div className="absolute inset-0 opacity-10">
@@ -30,17 +30,17 @@ export default function Home() {
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl">
+          <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block mb-4 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30">
               <span className="text-sm font-semibold text-white">Established 1995</span>
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-6 leading-tight animate-fade-in">
               Delivering Freshness from Pakistan to Global Markets
             </h1>
-            <p className="text-xl md:text-2xl mb-10 text-gray-300 leading-relaxed max-w-3xl">
+            <p className="text-xl md:text-2xl mb-10 text-gray-300 leading-relaxed max-w-3xl mx-auto">
               The trusted land-route gateway to Central Asia for Fresh Fruits, Vegetables, & Rice.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/products"
                 className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary/50"
@@ -121,6 +121,7 @@ export default function Home() {
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
               </div>
+              <div className="text-6xl font-bold text-accent mb-4 font-heading">100%</div>
               <h3 className="text-2xl font-semibold text-text mb-3">Freshness Guaranteed</h3>
               <p className="text-gray-600 leading-relaxed">Quality assured from farm to destination</p>
             </div>
