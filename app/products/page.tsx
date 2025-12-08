@@ -3,8 +3,31 @@ import Image from "next/image";
 import { products } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "Our Products | International Business System",
-  description: "Premium quality Kinnow, Potatoes, and Rice exported from Pakistan to Central Asia. Fresh, export-grade produce with international certifications.",
+  title: "Products - Premium Kinnow, Potatoes & Rice Exporters | IBS Pakistan",
+  description: "Premium quality fresh Kinnow (Mandarins), Potatoes, and Rice exported from Pakistan to Central Asia. Export-grade produce with international certifications. Sourced from Sargodha, Okara, and Punjab's finest farms.",
+  keywords: [
+    "Kinnow exporters Pakistan",
+    "fresh mandarin exporters",
+    "potato exporters Pakistan",
+    "rice exporters Pakistan",
+    "Basmati rice exporters",
+    "IRRI rice exporters",
+    "export grade fruits",
+    "export grade vegetables",
+    "fresh produce exporters",
+    "Sargodha Kinnow",
+    "Okara potatoes",
+    "Punjab rice exporters",
+  ],
+  openGraph: {
+    title: "Products - Premium Kinnow, Potatoes & Rice Exporters | IBS Pakistan",
+    description: "Premium quality fresh Kinnow, Potatoes, and Rice exported from Pakistan to Central Asia. Export-grade produce with international certifications.",
+    url: "https://www.ibsglobal.pk/products",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://www.ibsglobal.pk/products",
+  },
 };
 
 export default function ProductsPage() {

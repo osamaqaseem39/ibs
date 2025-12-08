@@ -2,8 +2,26 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us | International Business System",
-  description: "Learn about IBS - Pakistan's trusted exporter of fresh agricultural produce to Central Asia since 1995.",
+  title: "About Us - Pakistan's Trusted Agricultural Exporters Since 1995",
+  description: "Learn about International Business System (IBS) - Pakistan's trusted exporter of fresh fruits, vegetables, and rice to Central Asia since 1995. Headquartered in Quetta with 30+ years of export excellence.",
+  keywords: [
+    "about IBS Pakistan",
+    "agricultural exporters Pakistan",
+    "Quetta exporters",
+    "fresh produce exporters history",
+    "Pakistan Central Asia trade",
+    "export company Pakistan",
+    "agricultural export business",
+  ],
+  openGraph: {
+    title: "About Us - Pakistan's Trusted Agricultural Exporters Since 1995",
+    description: "Learn about International Business System (IBS) - Pakistan's trusted exporter of fresh fruits, vegetables, and rice to Central Asia since 1995.",
+    url: "https://www.ibsglobal.pk/about",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://www.ibsglobal.pk/about",
+  },
 };
 
 export default function About() {

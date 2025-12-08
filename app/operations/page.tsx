@@ -1,8 +1,28 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Operations & Infrastructure | International Business System",
-  description: "Learn about IBS's supply chain workflow, infrastructure, and compliance certifications for agricultural exports.",
+  title: "Operations & Infrastructure - Supply Chain & Certifications | IBS",
+  description: "Learn about IBS's supply chain workflow, infrastructure, quality control processes, and compliance certifications for agricultural exports from Pakistan to Central Asia. Land-route logistics expertise.",
+  keywords: [
+    "export operations Pakistan",
+    "supply chain agricultural exports",
+    "export infrastructure Pakistan",
+    "export certifications",
+    "quality control exports",
+    "land route logistics",
+    "export compliance Pakistan",
+    "agricultural export process",
+    "export documentation",
+  ],
+  openGraph: {
+    title: "Operations & Infrastructure - Supply Chain & Certifications | IBS",
+    description: "Learn about IBS's supply chain workflow, infrastructure, quality control processes, and compliance certifications for agricultural exports.",
+    url: "https://www.ibsglobal.pk/operations",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://www.ibsglobal.pk/operations",
+  },
 };
 
 export default function Operations() {

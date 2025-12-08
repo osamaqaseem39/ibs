@@ -2,8 +2,26 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Company | International Business System",
-  description: "Learn about IBS's market presence, competitive advantages, sustainability initiatives, and future outlook.",
+  title: "Company - Market Presence & Competitive Advantages | IBS Pakistan",
+  description: "Discover IBS's market presence across Central Asia, competitive advantages, sustainability initiatives, and future outlook. Serving 6 countries with 30+ years of export expertise from Quetta, Pakistan.",
+  keywords: [
+    "IBS market presence",
+    "Central Asia exporters",
+    "competitive advantages Pakistan exporters",
+    "sustainability agricultural exports",
+    "export market Central Asia",
+    "Pakistan exporters advantages",
+    "agricultural export sustainability",
+  ],
+  openGraph: {
+    title: "Company - Market Presence & Competitive Advantages | IBS Pakistan",
+    description: "Discover IBS's market presence across Central Asia, competitive advantages, sustainability initiatives, and future outlook.",
+    url: "https://www.ibsglobal.pk/company",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://www.ibsglobal.pk/company",
+  },
 };
 
 export default function Company() {
