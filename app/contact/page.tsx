@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { generateBreadcrumbSchema, generateOrganizationSchema, generateLocalBusinessSchema } from "@/lib/metadata";
+import Script from "next/script";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -26,8 +28,31 @@ export default function Contact() {
     });
   };
 
+  const organizationSchema = generateOrganizationSchema();
+  const localBusinessSchema = generateLocalBusinessSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Contact Us", url: "/contact" },
+  ]);
+
   return (
-    <div className="min-h-screen">
+    <>
+      <Script
+        id="organization-schema-contact"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <Script
+        id="local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="breadcrumb-schema-contact"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary to-red-700 text-white py-16">
         <div className="container mx-auto px-4">
@@ -188,6 +213,7 @@ export default function Contact() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

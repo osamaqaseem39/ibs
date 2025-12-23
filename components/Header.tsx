@@ -50,6 +50,9 @@ export default function Header() {
             <Link href="/operations" className="text-text hover:text-primary transition-colors">
               Operations
             </Link>
+            <Link href="/blog" className="text-text hover:text-primary transition-colors">
+              Blog
+            </Link>
             <Link href="/contact" className="text-text hover:text-primary transition-colors">
               Contact
             </Link>
@@ -122,6 +125,13 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Operations
+            </Link>
+            <Link
+              href="/blog"
+              className="block text-text hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
             </Link>
             <Link
               href="/contact"

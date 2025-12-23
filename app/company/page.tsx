@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { generateMetadata as genMeta, generateBreadcrumbSchema } from "@/lib/metadata";
+import Script from "next/script";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = genMeta({
   title: "Company - Market Presence & Competitive Advantages | IBS Pakistan",
-    description: "Discover IBS's market presence across Central Asia, competitive advantages, sustainability initiatives, and future outlook. Serving 5 countries with 30+ years of export expertise from Quetta, Pakistan.",
+  description: "Discover IBS's market presence across Central Asia, competitive advantages, sustainability initiatives, and future outlook. Serving Uzbekistan, Turkmenistan, Kazakhstan, Kyrgyzstan, and Tajikistan with 30+ years of export expertise from Quetta, Pakistan. Learn about our strategic location, farmer network, and proven track record.",
   keywords: [
     "IBS market presence",
     "Central Asia exporters",
@@ -12,21 +14,28 @@ export const metadata: Metadata = {
     "export market Central Asia",
     "Pakistan exporters advantages",
     "agricultural export sustainability",
+    "export destinations Central Asia",
+    "Quetta export company",
+    "export competitive edge",
   ],
-  openGraph: {
-    title: "Company - Market Presence & Competitive Advantages | IBS Pakistan",
-    description: "Discover IBS's market presence across Central Asia, competitive advantages, sustainability initiatives, and future outlook.",
-    url: "https://www.ibsglobal.pk/company",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://www.ibsglobal.pk/company",
-  },
-};
+  path: "/company",
+});
 
 export default function Company() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "About Us", url: "/about" },
+    { name: "Company", url: "/company" },
+  ]);
+
   return (
-    <div className="min-h-screen">
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary to-red-700 text-white py-16">
         <div className="container mx-auto px-4">
@@ -233,6 +242,7 @@ export default function Company() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

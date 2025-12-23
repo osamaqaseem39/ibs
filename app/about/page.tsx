@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { generateMetadata as genMeta, generateOrganizationSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/metadata";
+import Script from "next/script";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = genMeta({
   title: "About Us - Pakistan's Trusted Agricultural Exporters Since 1995",
-  description: "Learn about International Business System (IBS) - Pakistan's trusted exporter of fresh fruits, vegetables, and rice to Central Asia since 1995. Headquartered in Quetta with 30+ years of export excellence.",
+  description: "Learn about International Business System (IBS) - Pakistan's trusted exporter of fresh fruits, vegetables, and rice to Central Asia since 1995. Headquartered in Quetta with 30+ years of export excellence. Founded by Mr. Kashif Naseem, specializing in land-route exports to Uzbekistan, Turkmenistan, Kazakhstan, Kyrgyzstan, and Tajikistan.",
   keywords: [
     "about IBS Pakistan",
     "agricultural exporters Pakistan",
@@ -12,21 +14,61 @@ export const metadata: Metadata = {
     "Pakistan Central Asia trade",
     "export company Pakistan",
     "agricultural export business",
+    "IBS company history",
+    "Kashif Naseem",
+    "export company Quetta",
+    "land route exporters",
   ],
-  openGraph: {
-    title: "About Us - Pakistan's Trusted Agricultural Exporters Since 1995",
-    description: "Learn about International Business System (IBS) - Pakistan's trusted exporter of fresh fruits, vegetables, and rice to Central Asia since 1995.",
-    url: "https://www.ibsglobal.pk/about",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://www.ibsglobal.pk/about",
-  },
-};
+  path: "/about",
+});
 
 export default function About() {
+  const organizationSchema = generateOrganizationSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "About Us", url: "/about" },
+  ]);
+  const faqSchema = generateFAQSchema([
+    {
+      question: "When was International Business System (IBS) established?",
+      answer: "International Business System (IBS) was established in 1995 in Quetta, Pakistan, and has been exporting fresh fruits, vegetables, and rice to Central Asia for over 30 years.",
+    },
+    {
+      question: "Where is IBS headquartered?",
+      answer: "IBS is headquartered in Quetta, Balochistan, Pakistan, strategically positioned near the Afghanistan border, serving as a direct trade gateway to Central Asia.",
+    },
+    {
+      question: "What products does IBS export?",
+      answer: "IBS exports fresh Kinnow (Mandarins), Potatoes, and Rice (Basmati and IRRI varieties) from Pakistan to Central Asian countries including Uzbekistan, Turkmenistan, Kazakhstan, Kyrgyzstan, and Tajikistan.",
+    },
+    {
+      question: "What are IBS's core values?",
+      answer: "IBS's core values include Integrity, Commitment, Quality, Reliability, Sustainability, and Tradition. The company conducts business with honesty, commitment, and transparency in all operations.",
+    },
+    {
+      question: "Who leads International Business System?",
+      answer: "IBS is led by Mr. Kashif Naseem, the Proprietor, who has over 25 years of experience in agricultural trade and logistics, specializing in border trade dynamics and quality control.",
+    },
+  ]);
+
   return (
-    <div className="min-h-screen">
+    <>
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary to-red-700 text-white py-16">
         <div className="container mx-auto px-4">
@@ -241,5 +283,6 @@ export default function About() {
         </div>
       </section>
     </div>
+    </>
   );
 }

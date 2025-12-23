@@ -1,11 +1,64 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import ProductCard from "@/components/ProductCard";
+import { products } from "@/data/products";
+import { generateMetadata as genMeta, generateOrganizationSchema, generateBreadcrumbSchema, generateWebSiteSchema } from "@/lib/metadata";
+import Script from "next/script";
+
+export const metadata: Metadata = genMeta({
+  title: "IBS - Fresh Fruit & Vegetable Exporters Pakistan | Quetta Since 1995",
+  description: "International Business System (IBS) - Leading exporters of fresh Kinnow, Potatoes, and Rice from Pakistan to Central Asia. Established 1995 in Quetta. Premium quality agricultural produce via reliable land routes. Serving Uzbekistan, Turkmenistan, Kazakhstan, Kyrgyzstan, and Tajikistan.",
+  keywords: [
+    "fresh fruit exporters Pakistan",
+    "vegetable exporters Pakistan",
+    "rice exporters Pakistan",
+    "Kinnow exporters",
+    "potato exporters Pakistan",
+    "Basmati rice exporters",
+    "Central Asia trade",
+    "land route exports",
+    "agricultural exports Pakistan",
+    "Quetta exporters",
+    "fresh produce exporters",
+    "export grade fruits",
+    "export grade vegetables",
+    "Pakistan to Afghanistan exports",
+    "Uzbekistan trade",
+    "Tajikistan exports",
+    "Turkmenistan exporters",
+    "Kazakhstan trade",
+    "Kyrgyzstan exports",
+  ],
+  path: "/",
+  image: "/images/herobg.png",
+});
 
 export default function Home() {
+  const organizationSchema = generateOrganizationSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+  ]);
+  const websiteSchema = generateWebSiteSchema();
+
   return (
-    <div className="overflow-hidden">
+    <>
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <Script
+        id="website-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative text-white py-24 md:py-40 min-h-[90vh] flex items-center overflow-hidden">
         {/* Background Image */}
@@ -244,101 +297,9 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
-            {/* Kinnow Card */}
-            <Link href="/products#kinnow" className="group">
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col">
-                <div className="h-72 relative overflow-hidden">
-                  <Image
-                    src="/images/kinnow.jpg"
-                    alt="Fresh Kinnow (Mandarins)"
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors"></div>
-                  <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full z-10">
-                    <span className="text-white text-sm font-semibold">Premium</span>
-                  </div>
-                </div>
-                <div className="p-8 flex-grow flex flex-col">
-                  <h3 className="text-2xl font-bold text-text mb-3 group-hover:text-primary transition-colors">
-                    Mandarins (Kinnow)
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed mb-4 flex-grow">
-                    Premium quality citrus from Sargodha, Punjab. Bright orange skin with high juice content.
-                  </p>
-                  <div className="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform">
-                    Learn more
-                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            {/* Potato Card */}
-            <Link href="/products#potato" className="group">
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col">
-                <div className="h-72 relative overflow-hidden">
-                  <Image
-                    src="/images/potato.jpg"
-                    alt="Fresh Potatoes"
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors"></div>
-                  <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full z-10">
-                    <span className="text-white text-sm font-semibold">Export Grade</span>
-                  </div>
-                </div>
-                <div className="p-8 flex-grow flex flex-col">
-                  <h3 className="text-2xl font-bold text-text mb-3 group-hover:text-primary transition-colors">
-                    Fresh Potatoes
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed mb-4 flex-grow">
-                    Export-grade potatoes from Okara, Punjab. Available in multiple varieties.
-                  </p>
-                  <div className="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform">
-                    Learn more
-                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            {/* Rice Card */}
-            <Link href="/products#rice" className="group">
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col">
-                <div className="h-72 relative overflow-hidden">
-                  <Image
-                    src="/images/rice.jpg"
-                    alt="Premium Rice"
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors"></div>
-                  <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full z-10">
-                    <span className="text-white text-sm font-semibold">Certified</span>
-                  </div>
-                </div>
-                <div className="p-8 flex-grow flex flex-col">
-                  <h3 className="text-2xl font-bold text-text mb-3 group-hover:text-primary transition-colors">
-                    Premium Rice
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed mb-4 flex-grow">
-                    Basmati and IRRI varieties. Hygienically processed and export-certified.
-                  </p>
-                  <div className="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform">
-                    Learn more
-                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </Link>
+            {products.map((product) => (
+              <ProductCard key={product.id} product={product} variant="grid" />
+            ))}
           </div>
         </div>
       </section>
@@ -377,5 +338,6 @@ export default function Home() {
         </div>
       </section>
     </div>
+    </>
   );
 }

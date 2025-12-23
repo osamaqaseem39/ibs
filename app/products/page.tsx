@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { products } from "@/data/products";
 import ProductImageGallery from "@/components/ProductImageGallery";
+import { generateMetadata as genMeta, generateBreadcrumbSchema, generateProductSchema } from "@/lib/metadata";
+import Script from "next/script";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = genMeta({
   title: "Products - Premium Kinnow, Potatoes & Rice Exporters | IBS Pakistan",
-  description: "Premium quality fresh Kinnow (Mandarins), Potatoes, and Rice exported from Pakistan to Central Asia. Export-grade produce with international certifications. Sourced from Sargodha, Okara, and Punjab's finest farms.",
+  description: "Premium quality fresh Kinnow (Mandarins), Potatoes, and Rice exported from Pakistan to Central Asia. Export-grade produce with international certifications. Sourced from Sargodha, Okara, and Punjab's finest farms. Available varieties: Lady Rosetta, Mozika, Sante, Esmee potatoes; Super Basmati, 1121, 1509, IRRI-6 rice.",
   keywords: [
     "Kinnow exporters Pakistan",
     "fresh mandarin exporters",
@@ -18,21 +20,48 @@ export const metadata: Metadata = {
     "Sargodha Kinnow",
     "Okara potatoes",
     "Punjab rice exporters",
+    "Lady Rosetta potatoes",
+    "Super Basmati rice",
+    "1121 Basmati",
+    "1509 Basmati",
+    "IRRI-6 rice",
   ],
-  openGraph: {
-    title: "Products - Premium Kinnow, Potatoes & Rice Exporters | IBS Pakistan",
-    description: "Premium quality fresh Kinnow, Potatoes, and Rice exported from Pakistan to Central Asia. Export-grade produce with international certifications.",
-    url: "https://www.ibsglobal.pk/products",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://www.ibsglobal.pk/products",
-  },
-};
+  path: "/products",
+  image: "/images/rice.jpg",
+});
 
 export default function ProductsPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Products", url: "/products" },
+  ]);
+
+  const productSchemas = products.map((product) =>
+    generateProductSchema({
+      name: product.name,
+      description: product.description,
+      image: product.image,
+      category: product.category,
+      origin: product.origin,
+    })
+  );
+
   return (
-    <div className="min-h-screen">
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {productSchemas.map((schema, index) => (
+        <Script
+          key={index}
+          id={`product-schema-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary to-red-700 text-white py-16">
         <div className="container mx-auto px-4">
@@ -218,5 +247,6 @@ export default function ProductsPage() {
         </section>
       ))}
     </div>
+    </>
   );
 }

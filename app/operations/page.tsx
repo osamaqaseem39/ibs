@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { generateMetadata as genMeta, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/metadata";
+import Script from "next/script";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = genMeta({
   title: "Operations & Infrastructure - Supply Chain & Certifications | IBS",
-  description: "Learn about IBS's supply chain workflow, infrastructure, quality control processes, and compliance certifications for agricultural exports from Pakistan to Central Asia. Land-route logistics expertise.",
+  description: "Learn about IBS's supply chain workflow, infrastructure, quality control processes, and compliance certifications for agricultural exports from Pakistan to Central Asia. Land-route logistics expertise. 7-step process from farm selection to delivery. PHDEC membership, phytosanitary certification, customs compliance.",
   keywords: [
     "export operations Pakistan",
     "supply chain agricultural exports",
@@ -13,19 +15,43 @@ export const metadata: Metadata = {
     "export compliance Pakistan",
     "agricultural export process",
     "export documentation",
+    "PHDEC membership",
+    "phytosanitary certification",
+    "export workflow",
+    "Quetta export infrastructure",
   ],
-  openGraph: {
-    title: "Operations & Infrastructure - Supply Chain & Certifications | IBS",
-    description: "Learn about IBS's supply chain workflow, infrastructure, quality control processes, and compliance certifications for agricultural exports.",
-    url: "https://www.ibsglobal.pk/operations",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://www.ibsglobal.pk/operations",
-  },
-};
+  path: "/operations",
+});
 
 export default function Operations() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Operations", url: "/operations" },
+  ]);
+
+  const faqSchema = generateFAQSchema([
+    {
+      question: "What is IBS's supply chain workflow?",
+      answer: "IBS follows a 7-step supply chain process: 1) Farm Selection, 2) Field Inspection, 3) Grading & Sorting, 4) Packing, 5) Storage, 6) Transportation, and 7) Documentation. This ensures quality and reliability at every stage.",
+    },
+    {
+      question: "Where is IBS's infrastructure located?",
+      answer: "IBS has its head office in Quetta managing export coordination, documentation, and customs clearance. Procurement hubs are in Sargodha for citrus, Okara for potatoes, and Punjab for rice. Storage and cold handling facilities are in Quetta.",
+    },
+    {
+      question: "What certifications does IBS have?",
+      answer: "IBS maintains Phytosanitary Certification for all fresh produce shipments, Inspection Reports from approved agencies, PHDEC (Pakistan Horticulture Development & Export Company) Membership, and full Customs Compliance under Pakistan Customs Act and Export Policy guidelines.",
+    },
+    {
+      question: "How does IBS transport products to Central Asia?",
+      answer: "IBS transports products exclusively via land routes through Quetta, Chaman, and Afghan routes into Central Asia. The company has established partnerships with logistics companies experienced in Afghanistan and Central Asia routes.",
+    },
+    {
+      question: "What quality control measures does IBS implement?",
+      answer: "IBS maintains end-to-end control over export operations with continuous monitoring of harvesting and storage conditions, uniform sizing and quality classification, rigorous quality control processes, and smooth cargo flow through border crossings.",
+    },
+  ]);
+
   const workflowSteps = [
     {
       step: "1",
@@ -130,7 +156,18 @@ export default function Operations() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary via-red-700 to-primary text-white py-20 md:py-28 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -273,6 +310,7 @@ export default function Operations() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 
