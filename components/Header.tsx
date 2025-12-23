@@ -18,17 +18,17 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`bg-secondary shadow-md sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-6'}`}>
+    <header className={`bg-secondary shadow-md sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'py-1' : 'py-3'}`}>
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center transition-transform duration-300" style={{ transform: isScrolled ? 'scale(0.75)' : 'scale(1)' }}>
+          <Link href="/" className="flex items-center transition-transform duration-300" style={{ transform: isScrolled ? 'scale(0.8)' : 'scale(1)' }}>
             <Image
               src="/images/logo.png"
               alt="IBS Logo"
               width={160}
               height={53}
-              className={`w-auto transition-all duration-300 ${isScrolled ? 'h-10' : 'h-14'}`}
+              className={`w-auto transition-all duration-300 ${isScrolled ? 'h-10' : 'h-12'}`}
               priority
             />
           </Link>
