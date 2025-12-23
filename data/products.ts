@@ -55,7 +55,7 @@ export const products: Product[] = [
     name: "Fresh Potatoes",
     shortName: "Potatoes",
     description: "Export-grade potatoes from Okara, Punjab. Available in multiple varieties with excellent quality control.",
-    image: "/images/potato.jpg",
+    image: "/images/Lady-Rosetta-Potato.webp",
     category: "Vegetables",
     origin: "Okara, Punjab — Pakistan's leading potato-growing region.",
     features: [
@@ -101,7 +101,7 @@ export const products: Product[] = [
     name: "Rice (Basmati & IRRI Varieties)",
     shortName: "Rice",
     description: "Basmati and IRRI varieties. Hygienically processed and export-certified with full documentation.",
-    image: "/images/rice.jpg",
+    image: "/images/Super_Basmati.jpg",
     category: "Grains",
     origin: "Punjab's fertile rice-growing regions.",
     features: [
