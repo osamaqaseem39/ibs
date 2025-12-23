@@ -1,0 +1,9 @@
+# Token Efficiency Rules
+- Be extremely concise. 
+- Use sparse, high-density prose.
+- Provide code snippets only. Never re-print an entire file.
+- Use '...' or '// rest of code' to indicate unchanged sections.
+- Do not apologize or use conversational filler (e.g., "Sure, I can help with that").
+- If the solution requires a new library, ask for permission before including it.
+- If I provide a terminal error, only analyze the stack trace relevant to our current file.
+

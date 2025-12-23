@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { products } from "@/data/products";
+import ProductImageGallery from "@/components/ProductImageGallery";
 
 export const metadata: Metadata = {
   title: "Products - Premium Kinnow, Potatoes & Rice Exporters | IBS Pakistan",
@@ -59,18 +59,16 @@ export default function ProductsPage() {
               }`}>
                 {/* Image Section */}
                 <div className={`relative ${product.id === "potato" ? "lg:col-start-2" : ""}`}>
-                  <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl group">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      priority={index === 0}
+                  <div className="relative">
+                    <ProductImageGallery
+                      mainImage={product.image}
+                      productName={product.name}
+                      variations={product.variationImages}
+                      autoSlide={true}
+                      slideInterval={5000}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     {product.badge && (
-                      <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                      <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg z-30 pointer-events-none">
                         <span className="text-primary font-bold text-sm uppercase tracking-wide">
                           {product.badge}
                         </span>

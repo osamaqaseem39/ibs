@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact Us - Get Export Quote | IBS Pakistan",
-  description: "Contact International Business System (IBS) for export inquiries, quotes, and partnerships. Located in Quetta, Pakistan. Phone: +92-333-7809555. Email: kashif.naseem@ibsglobal.pk",
+  description: "Contact International Business System (IBS) for export inquiries, quotes, and partnerships. Located in Quetta, Pakistan. Phone: +92-333-7809555. Email: info@ibsglobal.pk",
   keywords: [
     "contact IBS Pakistan",
     "export inquiry Pakistan",

@@ -72,10 +72,10 @@ export default function Footer() {
             </p>
             <p>
               <a
-                href="mailto:kashif.naseem@ibsglobal.pk"
+                href="mailto:info@ibsglobal.pk"
                 className="hover:text-primary transition-colors"
               >
-                kashif.naseem@ibsglobal.pk
+                info@ibsglobal.pk
               </a>
             </p>
           </div>

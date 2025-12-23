@@ -32,3 +32,13 @@ body {
 .animate-fade-in {
   animation: fade-in 1s ease-out;
 }
+
+/* Hide scrollbar for thumbnail gallery */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

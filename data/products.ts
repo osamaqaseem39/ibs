@@ -1,3 +1,8 @@
+export interface ProductVariation {
+  name: string;
+  image: string;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -8,6 +13,7 @@ export interface Product {
   origin: string;
   features: string[];
   varieties?: string[];
+  variationImages?: ProductVariation[];
   processing?: string;
   packaging?: string;
   storage?: string;
@@ -31,6 +37,16 @@ export const products: Product[] = [
       "Bright orange skin",
       "High juice content",
       "Balanced sweetness"
+    ],
+    variationImages: [
+      {
+        name: "Premium Kinnow",
+        image: "/images/kinnow.jpg"
+      },
+      {
+        name: "Export Grade",
+        image: "/images/kinnow.jpg"
+      }
     ],
     processing: "Harvested at peak maturity, washed, waxed, graded, and packed in ventilated cartons.",
     transportation: "Shipped through Quetta–Chaman–Kandahar route for Central Asian distribution.",
@@ -62,6 +78,20 @@ export const products: Product[] = [
       "Mozika",
       "Sante"
     ],
+    variationImages: [
+      {
+        name: "Lady Rosetta",
+        image: "/images/potato.jpg"
+      },
+      {
+        name: "Mozika",
+        image: "/images/potato.jpg"
+      },
+      {
+        name: "Sante",
+        image: "/images/potato.jpg"
+      }
+    ],
     processing: "Sorted by size, skin smoothness, and internal quality.",
     packaging: "Exported in 20 kg to 50 kg jute or mesh bags, labeled as per buyer needs.",
     storage: "Stored in controlled facilities before transit to maintain freshness.",
@@ -88,6 +118,20 @@ export const products: Product[] = [
       "Super Basmati",
       "1121 Basmati",
       "IRRI-6"
+    ],
+    variationImages: [
+      {
+        name: "Super Basmati",
+        image: "/images/rice.jpg"
+      },
+      {
+        name: "1121 Basmati",
+        image: "/images/rice.jpg"
+      },
+      {
+        name: "IRRI-6",
+        image: "/images/rice.jpg"
+      }
     ],
     processing: "Hygienically milled, cleaned, and packed in 5–50 kg export-standard bags.",
     certifications: "Fumigation and phytosanitary documentation provided per shipment.",
