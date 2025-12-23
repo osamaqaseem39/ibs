@@ -143,20 +143,6 @@ export default function ProductCard({
                       <p>{product.certifications}</p>
                     </div>
                   )}
-                  {product.destinations && product.destinations.length > 0 && (
-                    <div>
-                      <h3 className="font-semibold text-text mb-2">
-                        {product.destinations.length > 1 ? "Destinations:" : "Markets:"}
-                      </h3>
-                      <p className="flex flex-wrap gap-2">
-                        {product.destinations.map((destination, index) => (
-                          <span key={index} className="bg-gray-100 px-3 py-1 rounded">
-                            {destination}
-                          </span>
-                        ))}
-                      </p>
-                    </div>
-                  )}
                 </div>
               </div>
             </div>

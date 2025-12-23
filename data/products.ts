@@ -38,16 +38,6 @@ export const products: Product[] = [
       "High juice content",
       "Balanced sweetness"
     ],
-    variationImages: [
-      {
-        name: "Premium Kinnow",
-        image: "/images/kinnow.jpg"
-      },
-      {
-        name: "Export Grade",
-        image: "/images/kinnow.jpg"
-      }
-    ],
     processing: "Harvested at peak maturity, washed, waxed, graded, and packed in ventilated cartons.",
     transportation: "Shipped through Quetta–Chaman–Kandahar route for Central Asian distribution.",
     destinations: [
@@ -76,20 +66,25 @@ export const products: Product[] = [
     varieties: [
       "Lady Rosetta",
       "Mozika",
-      "Sante"
+      "Sante",
+      "Esmee"
     ],
     variationImages: [
       {
         name: "Lady Rosetta",
-        image: "/images/potato.jpg"
+        image: "/images/Lady-Rosetta-Potato.webp"
       },
       {
         name: "Mozika",
-        image: "/images/potato.jpg"
+        image: "/images/moziqa.jpg"
       },
       {
         name: "Sante",
-        image: "/images/potato.jpg"
+        image: "/images/sante.png"
+      },
+      {
+        name: "Esmee",
+        image: "/images/Esmee-potato-seeds.jpg"
       }
     ],
     processing: "Sorted by size, skin smoothness, and internal quality.",
@@ -117,20 +112,25 @@ export const products: Product[] = [
     varieties: [
       "Super Basmati",
       "1121 Basmati",
+      "1509 Basmati",
       "IRRI-6"
     ],
     variationImages: [
       {
         name: "Super Basmati",
-        image: "/images/rice.jpg"
+        image: "/images/Super_Basmati.jpg"
       },
       {
         name: "1121 Basmati",
-        image: "/images/rice.jpg"
+        image: "/images/1121.jpg"
+      },
+      {
+        name: "1509 Basmati",
+        image: "/images/1509-basmati-rice-491.jpg"
       },
       {
         name: "IRRI-6",
-        image: "/images/rice.jpg"
+        image: "/images/iri-6-rice.jpg"
       }
     ],
     processing: "Hygienically milled, cleaned, and packed in 5–50 kg export-standard bags.",

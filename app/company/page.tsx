@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Company - Market Presence & Competitive Advantages | IBS Pakistan",
-  description: "Discover IBS's market presence across Central Asia, competitive advantages, sustainability initiatives, and future outlook. Serving 6 countries with 30+ years of export expertise from Quetta, Pakistan.",
+    description: "Discover IBS's market presence across Central Asia, competitive advantages, sustainability initiatives, and future outlook. Serving 5 countries with 30+ years of export expertise from Quetta, Pakistan.",
   keywords: [
     "IBS market presence",
     "Central Asia exporters",
@@ -48,8 +48,8 @@ export default function Company() {
               </p>
               <div>
                 <h3 className="text-2xl font-bold text-text mb-6 text-center">Primary Export Destinations</h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                  {["Afghanistan", "Uzbekistan", "Turkmenistan", "Kazakhstan", "Kyrgyzstan", "Tajikistan"].map((country, index) => (
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                  {["Uzbekistan", "Turkmenistan", "Kazakhstan", "Kyrgyzstan", "Tajikistan"].map((country, index) => (
                     <div key={index} className="bg-white p-4 rounded-xl text-center shadow-md hover:shadow-lg transition-shadow border border-gray-100">
                       <div className="text-3xl mb-2">🌍</div>
                       <p className="font-semibold text-text">{country}</p>

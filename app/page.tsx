@@ -103,7 +103,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-4 pt-4">
                   <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
                     <div className="text-3xl mb-3">🌍</div>
-                    <h4 className="font-bold text-text mb-2">6 Countries</h4>
+                    <h4 className="font-bold text-text mb-2">5 Countries</h4>
                     <p className="text-sm text-gray-600">Serving across Central Asia</p>
                   </div>
                   <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">

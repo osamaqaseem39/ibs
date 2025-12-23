@@ -162,40 +162,26 @@ export default function Operations() {
               </p>
             </div>
             
-            <div className="relative">
-              {/* Timeline line - hidden on mobile, visible on desktop */}
-              <div className="hidden lg:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary opacity-30"></div>
-              
-              <div className="space-y-8 lg:space-y-12">
-                {workflowSteps.map((item, index) => (
-                  <div
-                    key={index}
-                    className="relative flex flex-col lg:flex-row items-start gap-6 group"
-                  >
-                    {/* Step Number Circle */}
-                    <div className="relative z-10 flex-shrink-0">
-                      <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-primary to-red-700 text-white rounded-full flex items-center justify-center text-xl lg:text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        {item.step}
-                      </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {workflowSteps.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-white to-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-2 group"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-red-700 text-white rounded-full flex items-center justify-center text-lg font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      {item.step}
                     </div>
-                    
-                    {/* Content Card */}
-                    <div className="flex-1 w-full lg:ml-4">
-                      <div className="bg-gradient-to-br from-gray-50 to-white p-6 lg:p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-primary/20 group-hover:-translate-y-1">
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-3">
-                          <span className="text-4xl lg:text-5xl">{item.icon}</span>
-                          <h3 className="text-2xl lg:text-3xl font-heading font-bold text-text">
-                            {item.title}
-                          </h3>
-                        </div>
-                        <p className="text-gray-700 text-lg leading-relaxed pl-0 sm:pl-16">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
+                    <span className="text-3xl">{item.icon}</span>
                   </div>
-                ))}
-              </div>
+                  <h3 className="text-xl font-heading font-bold text-text mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
             </div>
 
             {/* Highlight Box */}
