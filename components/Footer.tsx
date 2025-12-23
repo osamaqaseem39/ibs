@@ -65,11 +65,18 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">Contact</h3>
             <p className="mb-2 text-gray-300">Room No. 41, Ahmed Complex</p>
             <p className="mb-2 text-gray-300">M.A. Jinnah Road, Quetta, Pakistan</p>
-            <p className="mb-2">
-              <a href="tel:+923337809555" className="hover:text-primary transition-colors">
-                +92-333-7809555
-              </a>
-            </p>
+            <div className="mb-2 space-y-1">
+              <p>
+                <a href="tel:+92812824023" className="hover:text-primary transition-colors">
+                  +92-81-2824023
+                </a>
+              </p>
+              <p>
+                <a href="tel:+92812824149" className="hover:text-primary transition-colors">
+                  +92-81-2824149
+                </a>
+              </p>
+            </div>
             <p>
               <a
                 href="mailto:info@ibsglobal.pk"

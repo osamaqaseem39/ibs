@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     description: "Leading exporters of fresh Kinnow, Potatoes, and Rice from Pakistan to Central Asia. Established 1995. Premium quality agricultural produce via reliable land routes.",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/favicon.png",
         width: 1200,
         height: 630,
         alt: "International Business System Logo",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "IBS - Fresh Fruit & Vegetable Exporters Pakistan",
     description: "Leading exporters of fresh Kinnow, Potatoes, and Rice from Pakistan to Central Asia since 1995.",
-    images: ["/images/logo.png"],
+    images: ["/favicon.png"],
   },
   robots: {
     index: true,

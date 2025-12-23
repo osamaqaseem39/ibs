@@ -3,7 +3,7 @@ import { generateMetadata as genMeta } from "@/lib/metadata";
 
 export const metadata: Metadata = genMeta({
   title: "Contact Us - Get Export Quote | IBS Pakistan",
-  description: "Contact International Business System (IBS) for export inquiries, quotes, and partnerships. Located in Quetta, Pakistan. Phone: +92-333-7809555. Email: info@ibsglobal.pk. Address: Room No. 41, Ahmed Complex, M.A. Jinnah Road, Quetta, Pakistan.",
+  description: "Contact International Business System (IBS) for export inquiries, quotes, and partnerships. Located in Quetta, Pakistan. Phone: +92-81-2824023, +92-81-2824149. Email: info@ibsglobal.pk. Address: Room No. 41, Ahmed Complex, M.A. Jinnah Road, Quetta, Pakistan.",
   keywords: [
     "contact IBS Pakistan",
     "export inquiry Pakistan",

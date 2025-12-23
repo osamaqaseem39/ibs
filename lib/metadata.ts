@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 const baseUrl = "https://www.ibsglobal.pk";
 const siteName = "International Business System";
-const defaultImage = "/images/logo.png";
+const defaultImage = "/favicon.png";
 
 export interface PageMetadata {
   title: string;
@@ -95,7 +95,7 @@ export function generateOrganizationSchema() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+92-333-7809555",
+      telephone: "+92-81-2824023",
       contactType: "Customer Service",
       email: "info@ibsglobal.pk",
       areaServed: ["PK", "AF", "UZ", "TM", "KZ", "KG", "TJ"],
@@ -247,7 +247,7 @@ export function generateLocalBusinessSchema() {
       latitude: 30.1965,
       longitude: 67.0092,
     },
-    telephone: "+92-333-7809555",
+    telephone: "+92-81-2824023",
     email: "info@ibsglobal.pk",
     priceRange: "$$",
     openingHoursSpecification: {

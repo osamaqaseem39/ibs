@@ -82,12 +82,20 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-text mb-3">Phone</h3>
-                    <a
-                      href="tel:+923337809555"
-                      className="text-primary hover:text-red-700 transition-colors text-lg"
-                    >
-                      +92-333-7809555
-                    </a>
+                    <div className="space-y-2">
+                      <a
+                        href="tel:+92812824023"
+                        className="block text-primary hover:text-red-700 transition-colors text-lg"
+                      >
+                        +92-81-2824023
+                      </a>
+                      <a
+                        href="tel:+92812824149"
+                        className="block text-primary hover:text-red-700 transition-colors text-lg"
+                      >
+                        +92-81-2824149
+                      </a>
+                    </div>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-text mb-3">Email</h3>
