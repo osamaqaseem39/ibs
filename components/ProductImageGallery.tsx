@@ -150,32 +150,35 @@ export default function ProductImageGallery({
         <div className="space-y-2">
           <p className="text-sm font-semibold text-gray-600">Variations:</p>
           <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
-            {allImages.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleThumbnailClick(item.image, index)}
-                className={`relative flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden border-2 transition-all duration-200 group ${
-                  index === currentIndex
-                    ? "border-primary shadow-lg scale-105 ring-2 ring-primary/20"
-                    : "border-gray-200 hover:border-gray-300"
-                }`}
-                aria-label={`View ${item.name}`}
-              >
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  fill
-                  className="object-cover transition-transform duration-200 group-hover:scale-110"
-                  sizes="96px"
-                />
-                {index === currentIndex && (
-                  <div className="absolute inset-0 bg-primary/20"></div>
-                )}
-                <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs px-2 py-1 text-center truncate">
-                  {item.name}
-                </div>
-              </button>
-            ))}
+            {variations.map((item, index) => {
+              const actualIndex = index + 1; // +1 because main image is at index 0
+              return (
+                <button
+                  key={index}
+                  onClick={() => handleThumbnailClick(item.image, actualIndex)}
+                  className={`relative flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden border-2 transition-all duration-200 group ${
+                    actualIndex === currentIndex
+                      ? "border-primary shadow-lg scale-105 ring-2 ring-primary/20"
+                      : "border-gray-200 hover:border-gray-300"
+                  }`}
+                  aria-label={`View ${item.name}`}
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    fill
+                    className="object-cover transition-transform duration-200 group-hover:scale-110"
+                    sizes="96px"
+                  />
+                  {actualIndex === currentIndex && (
+                    <div className="absolute inset-0 bg-primary/20"></div>
+                  )}
+                  <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs px-2 py-1 text-center truncate">
+                    {item.name}
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </div>
       )}
