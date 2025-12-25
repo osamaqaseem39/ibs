@@ -21,39 +21,17 @@ export default function Header() {
     <header className={`bg-secondary shadow-md sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'py-3' : 'py-6'}`}>
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          {/* Logos for Comparison */}
-          <div className="flex items-center gap-4">
-            <Link href="/" className="flex items-center transition-transform duration-300" style={{ transform: isScrolled ? 'scale(1)' : 'scale(1.2)' }}>
-              <Image
-                src="/images/logo.png"
-                alt="IBS Logo"
-                width={160}
-                height={53}
-                className={`w-auto transition-all duration-300 ${isScrolled ? 'h-12' : 'h-16'}`}
-                priority
-              />
-            </Link>
-            <Link href="/" className="flex items-center transition-transform duration-300" style={{ transform: isScrolled ? 'scale(1)' : 'scale(1.2)' }}>
-              <Image
-                src="/images/logo1.jpeg"
-                alt="IBS Logo 1"
-                width={160}
-                height={53}
-                className={`w-auto transition-all duration-300 ${isScrolled ? 'h-12' : 'h-16'}`}
-                priority
-              />
-            </Link>
-            <Link href="/" className="flex items-center transition-transform duration-300" style={{ transform: isScrolled ? 'scale(1)' : 'scale(1.2)' }}>
-              <Image
-                src="/images/logo2.jpeg"
-                alt="IBS Logo 2"
-                width={160}
-                height={53}
-                className={`w-auto transition-all duration-300 ${isScrolled ? 'h-12' : 'h-16'}`}
-                priority
-              />
-            </Link>
-          </div>
+          {/* Logo */}
+          <Link href="/" className="flex items-center transition-transform duration-300" style={{ transform: isScrolled ? 'scale(1)' : 'scale(1.2)' }}>
+            <Image
+              src="/images/logo.png"
+              alt="IBS Logo"
+              width={160}
+              height={53}
+              className={`w-auto transition-all duration-300 ${isScrolled ? 'h-12' : 'h-16'}`}
+              priority
+            />
+          </Link>
 
           {/* Desktop Menu */}
           <div className={`hidden md:flex items-center transition-all duration-300 ${isScrolled ? 'space-x-8' : 'space-x-10 text-lg'}`}>
