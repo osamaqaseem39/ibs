@@ -58,7 +58,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <div className="overflow-hidden">
+    <div className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative text-white py-24 md:py-40 min-h-[90vh] flex items-center overflow-hidden">
         {/* Background Image */}

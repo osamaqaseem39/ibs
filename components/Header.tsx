@@ -34,7 +34,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Menu */}
-          <div className={`hidden md:flex items-center transition-all duration-300 ${isScrolled ? 'space-x-8' : 'space-x-10 text-lg'}`}>
+          <div className={`hidden md:flex items-center transition-all duration-300 ${isScrolled ? 'space-x-4' : 'space-x-5'}`}>
             <Link href="/" className="text-text hover:text-primary transition-colors">
               Home
             </Link>
@@ -58,7 +58,7 @@ export default function Header() {
             </Link>
             <Link
               href="/contact"
-              className={`bg-primary text-white rounded-md hover:bg-red-700 transition-all duration-300 ${isScrolled ? 'px-6 py-2' : 'px-8 py-3 text-lg'}`}
+              className={`bg-primary text-white rounded-md hover:bg-red-700 transition-all duration-300 ${isScrolled ? 'px-4 py-1.5 text-sm' : 'px-5 py-2'}`}
             >
               Get a Quote
             </Link>
